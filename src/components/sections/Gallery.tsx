@@ -7,7 +7,7 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
 import { GALLERY_IMAGES } from '@/data/content'
 
-const CATEGORIES = ['Todos', 'Aniversário', 'Casamento', 'Festas', 'Especial', 'Decoração']
+const CATEGORIES = ['Todos', 'Aniversário', 'Personalizado', 'Elegante', 'Temático', 'Infantil', 'Sabores']
 
 export default function Gallery() {
   const [active, setActive] = useState('Todos')
@@ -86,12 +86,15 @@ export default function Gallery() {
                   loading="lazy"
                 />
                 {/* Hover/tap overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-4 sm:p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-4 sm:p-5">
                   <div className="flex flex-col items-center gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <ZoomIn className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                    <span className="text-xs text-white font-semibold tracking-widest uppercase bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                      {img.category}
-                    </span>
+                    <p className="text-sm font-semibold text-white text-center drop-shadow leading-tight px-2">{img.name}</p>
+                    <div className="flex items-center gap-2">
+                      <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5 text-white/80" />
+                      <span className="text-xs text-white font-semibold tracking-widest uppercase bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
+                        {img.category}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -147,7 +150,7 @@ export default function Gallery() {
                   style={{ aspectRatio: '4/5', maxHeight: '80vh' }}
                 >
                   <Image
-                    src={current.src.replace('w=600', 'w=1200').replace('w=800', 'w=1400')}
+                    src={current.src}
                     alt={current.alt}
                     fill
                     className="object-contain"
@@ -173,8 +176,9 @@ export default function Gallery() {
                   <ChevronRight size={20} />
                 </button>
 
-                {/* Category badge */}
-                <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2">
+                {/* Name + category badge */}
+                <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5">
+                  <p className="text-sm font-semibold text-white drop-shadow text-center px-2">{current.name}</p>
                   <span className="text-xs text-white font-semibold tracking-widest uppercase bg-white/20 px-4 py-1.5 rounded-full backdrop-blur-sm">
                     {current.category}
                   </span>

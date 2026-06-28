@@ -77,8 +77,8 @@ export default function Hero() {
                 {/* Glow ring inside the clipped container */}
                 <div className="absolute inset-0 bg-gradient-to-br from-rose-200 to-cream-200 blur-2xl opacity-55 scale-110" />
                 <Image
-                  src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=85"
-                  alt="Bolo artesanal premium Yok Cakes"
+                  src="/bolos/bolo-nude-floral.png"
+                  alt="Bolo artesanal premium Yok Cakes — naked cake com rosas e laço de cetim"
                   fill
                   className="object-cover"
                   priority
