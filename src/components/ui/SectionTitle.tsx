@@ -27,7 +27,7 @@ export default function SectionTitle({
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        'mb-14',
+        'mb-10 sm:mb-14',
         center && 'text-center flex flex-col items-center',
         className
       )}
@@ -38,14 +38,14 @@ export default function SectionTitle({
           {label}
         </span>
       )}
-      <h2 className="section-title text-balance">
+      <h2 className="section-title">
         {title}{' '}
         {titleAccent && (
-          <span className="gradient-text font-serif italic">{titleAccent}</span>
+          <em className="gradient-text not-italic font-serif">{titleAccent}</em>
         )}
       </h2>
       {subtitle && (
-        <p className={cn('section-subtitle', center && 'mx-auto')}>{subtitle}</p>
+        <p className={cn('section-subtitle', center && 'mx-auto text-center')}>{subtitle}</p>
       )}
     </motion.div>
   )

@@ -11,6 +11,8 @@ const OCCASIONS = [
   'Festa Infantil', 'Evento Empresarial', 'Surpresa Romântica', 'Outro',
 ]
 
+const SIZES = ['1 kg', '1,5 kg', '2 kg', '2,5 kg', '3 kg', '4 kg', '5 kg']
+
 export default function Contact() {
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', phone: '', occasion: '', message: '', size: '' })
@@ -32,6 +34,8 @@ export default function Contact() {
     { icon: MapPin, label: 'Localização', value: 'Lisboa, Portugal', href: '#', color: 'text-gold-600', bg: 'bg-amber-50' },
   ]
 
+  const inputClass = "w-full px-4 py-3 min-h-[48px] rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+
   return (
     <section id="contactos" className="section-padding bg-section-gradient">
       <div className="container-custom">
@@ -43,26 +47,27 @@ export default function Contact() {
           center
         />
 
-        <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 max-w-6xl mx-auto">
+
           {/* Left: Contact info */}
-          <div className="lg:col-span-2 space-y-5">
-            <div className="card-premium p-8">
-              <h3 className="font-serif text-xl font-bold text-gray-900 mb-6">Contactos</h3>
-              <div className="space-y-4">
+          <div className="lg:col-span-2 flex flex-col gap-5">
+            <div className="card-premium p-6 sm:p-8">
+              <h3 className="font-serif text-xl font-bold text-gray-900 mb-5 sm:mb-6">Contactos</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {CONTACTS.map((c) => (
                   <a
                     key={c.label}
                     href={c.href}
                     target={c.href.startsWith('http') ? '_blank' : undefined}
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 group"
+                    className="flex items-center gap-3 sm:gap-4 group min-h-[44px]"
                   >
-                    <div className={`w-10 h-10 rounded-xl ${c.bg} flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}>
-                      <c.icon className={`w-5 h-5 ${c.color}`} />
+                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${c.bg} flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110`}>
+                      <c.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${c.color}`} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">{c.label}</p>
-                      <p className="text-sm font-medium text-gray-900 group-hover:text-rose-600 transition-colors">{c.value}</p>
+                      <p className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-wide">{c.label}</p>
+                      <p className="text-sm font-medium text-gray-900 group-hover:text-rose-600 transition-colors truncate">{c.value}</p>
                     </div>
                   </a>
                 ))}
@@ -74,105 +79,123 @@ export default function Contact() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 rounded-2xl bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 hover:-translate-y-0.5 transition-all duration-200"
+              className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 hover:-translate-y-0.5 transition-all duration-200 min-h-[72px]"
               whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-6 h-6" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <p className="font-bold text-base leading-none">WhatsApp</p>
-                <p className="text-emerald-100 text-sm mt-1">Resposta rápida garantida</p>
+                <p className="font-bold text-sm sm:text-base leading-none">WhatsApp</p>
+                <p className="text-emerald-100 text-xs sm:text-sm mt-1">Resposta rápida garantida</p>
               </div>
             </motion.a>
           </div>
 
           {/* Right: Form */}
           <div className="lg:col-span-3">
-            <div className="card-premium p-8">
+            <div className="card-premium p-6 sm:p-8">
               {!sent ? (
                 <>
-                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-6">
-                    Enviar Mensagem
-                  </h3>
-                  <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid sm:grid-cols-2 gap-5">
+                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-5 sm:mb-6">Enviar Mensagem</h3>
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5" noValidate>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Nome *</label>
+                        <label htmlFor="contact-name" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                          Nome *
+                        </label>
                         <input
+                          id="contact-name"
                           required
                           type="text"
                           value={form.name}
                           onChange={(e) => setForm({ ...form, name: e.target.value })}
                           placeholder="O seu nome"
-                          className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+                          autoComplete="name"
+                          className={inputClass}
                         />
                       </div>
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Telefone</label>
+                        <label htmlFor="contact-phone" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                          Telefone
+                        </label>
                         <input
+                          id="contact-phone"
                           type="tel"
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
                           placeholder="+351 9XX XXX XXX"
-                          className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+                          autoComplete="tel"
+                          className={inputClass}
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Email *</label>
+                      <label htmlFor="contact-email" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                        Email *
+                      </label>
                       <input
+                        id="contact-email"
                         required
                         type="email"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         placeholder="o.seu@email.com"
-                        className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+                        autoComplete="email"
+                        className={inputClass}
                       />
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Ocasião</label>
+                        <label htmlFor="contact-occasion" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                          Ocasião
+                        </label>
                         <select
+                          id="contact-occasion"
                           value={form.occasion}
                           onChange={(e) => setForm({ ...form, occasion: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+                          className={inputClass}
                         >
                           <option value="">Selecionar...</option>
                           {OCCASIONS.map((o) => <option key={o}>{o}</option>)}
                         </select>
                       </div>
                       <div>
-                        <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Tamanho</label>
+                        <label htmlFor="contact-size" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                          Tamanho
+                        </label>
                         <select
+                          id="contact-size"
                           value={form.size}
                           onChange={(e) => setForm({ ...form, size: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
+                          className={inputClass}
                         >
                           <option value="">Selecionar...</option>
-                          {['1 kg', '1,5 kg', '2 kg', '2,5 kg', '3 kg', '4 kg', '5 kg'].map((s) => (
-                            <option key={s}>{s}</option>
-                          ))}
+                          {SIZES.map((s) => <option key={s}>{s}</option>)}
                         </select>
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">Mensagem *</label>
+                      <label htmlFor="contact-message" className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 block">
+                        Mensagem *
+                      </label>
                       <textarea
+                        id="contact-message"
                         required
                         rows={4}
                         value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
                         placeholder="Descreva o seu bolo ideal: tema, cores, data do evento..."
-                        className="w-full px-4 py-3 rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all resize-none"
+                        className={`${inputClass} min-h-[120px] resize-none`}
                       />
                     </div>
 
-                    <button type="submit" className="btn-primary w-full justify-center py-4 gap-3">
-                      <Send size={16} />
+                    <button type="submit" className="btn-primary w-full justify-center gap-3 py-4">
+                      <Send size={16} aria-hidden="true" />
                       Enviar pelo WhatsApp
                     </button>
 
@@ -185,13 +208,13 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center py-16 gap-5 text-center"
+                  className="flex flex-col items-center justify-center py-12 sm:py-16 gap-5 text-center"
                 >
-                  <div className="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center">
-                    <CheckCircle className="w-10 h-10 text-rose-500" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-rose-50 flex items-center justify-center">
+                    <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-rose-500" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-gray-900 mb-2">Mensagem enviada!</h3>
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-gray-900 mb-2">Mensagem enviada!</h3>
                     <p className="text-gray-500 text-sm max-w-xs">
                       O WhatsApp foi aberto com a sua mensagem. Respondemos em breve com o orçamento.
                     </p>

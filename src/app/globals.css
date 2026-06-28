@@ -13,27 +13,34 @@
     @apply font-sans bg-brand-surface text-gray-900;
   }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    @apply bg-cream-50;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gold-400 rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gold-500;
+  /* Focus visible — keyboard nav */
+  :focus-visible {
+    outline: 2px solid theme('colors.rose.500');
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 
-  ::selection {
-    @apply bg-rose-200 text-rose-800;
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-cream-50; }
+  ::-webkit-scrollbar-thumb { @apply bg-gold-400 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-gold-500; }
+
+  ::selection { @apply bg-rose-200 text-rose-800; }
+
+  /* Respect OS motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-16 md:py-24 lg:py-32;
   }
 
   .container-custom {
@@ -48,37 +55,65 @@
     @apply bg-gradient-to-r from-rose-600 via-rose-500 to-rose-400 bg-clip-text text-transparent;
   }
 
+  /* ── Buttons — min 48px touch target ── */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-rose-600 text-white font-semibold rounded-full shadow-rose hover:bg-rose-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm md:text-base cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 px-6 sm:px-7 min-h-[48px] bg-rose-600 text-white font-semibold rounded-full shadow-rose
+           hover:bg-rose-700 hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 active:scale-[0.98]
+           transition-all duration-200 text-sm sm:text-base cursor-pointer
+           focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/80 text-rose-600 font-semibold rounded-full border border-rose-200 hover:bg-rose-50 hover:border-rose-300 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm md:text-base cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 px-6 sm:px-7 min-h-[48px] bg-white/80 text-rose-600 font-semibold rounded-full border border-rose-200
+           hover:bg-rose-50 hover:border-rose-300 hover:-translate-y-0.5
+           active:translate-y-0 active:scale-[0.98]
+           transition-all duration-200 text-sm sm:text-base cursor-pointer
+           focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-gray-600 font-medium rounded-full hover:bg-cream-100 hover:text-gray-900 transition-all duration-200 text-sm cursor-pointer;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2 min-h-[44px] text-gray-600 font-medium rounded-full
+           hover:bg-cream-100 hover:text-gray-900
+           transition-all duration-200 text-sm cursor-pointer;
   }
 
   .section-label {
     @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-rose-600 text-xs font-semibold tracking-widest uppercase mb-5;
   }
 
+  /* clamp() for fluid typography */
   .section-title {
-    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-5;
+    @apply font-serif font-bold text-gray-900 leading-[1.1] mb-5 text-balance;
+    font-size: clamp(1.75rem, 3.5vw + 0.75rem, 3.75rem);
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl;
+    @apply text-gray-500 leading-relaxed max-w-2xl;
+    font-size: clamp(1rem, 1.5vw + 0.35rem, 1.25rem);
   }
 
   .card-premium {
-    @apply bg-white rounded-3xl border border-cream-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300;
+    @apply bg-white rounded-2xl sm:rounded-3xl border border-cream-200 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Horizontal scroll container for tabs/chips on mobile */
+  .scroll-x-mobile {
+    @apply flex gap-2 overflow-x-auto pb-2 -mx-4 px-4;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scroll-x-mobile::-webkit-scrollbar { display: none; }
+
+  @screen sm {
+    .scroll-x-mobile {
+      @apply flex-wrap justify-center overflow-visible pb-0 mx-0 px-0;
+    }
   }
 }

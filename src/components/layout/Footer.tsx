@@ -4,12 +4,13 @@ import { INSTAGRAM_URL, FACEBOOK_URL, EMAIL, WHATSAPP_URL, NAV_LINKS } from '@/d
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-300">
-      <div className="container-custom py-16">
-        <div className="grid md:grid-cols-3 gap-12 pb-12 border-b border-gray-800">
+      <div className="container-custom py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 pb-10 sm:pb-12 border-b border-gray-800">
+
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-xs font-serif font-bold">Y</span>
               </div>
               <div className="flex flex-col -space-y-0.5">
@@ -18,15 +19,18 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed max-w-[260px]">
-              Criamos momentos doces e inesquecíveis através de bolos artesanais feitos com carinho e ingredientes premium.
+              Criamos momentos doces e inesquecíveis através de bolos artesanais feitos com
+              carinho e ingredientes premium.
             </p>
             <p className="text-xs text-gray-500 italic font-serif">&quot;Amor em forma de bolo.&quot;</p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Navegação</h3>
-            <ul className="space-y-3">
+            <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4 sm:mb-5">
+              Navegação
+            </h3>
+            <ul className="space-y-2.5 sm:space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
@@ -42,55 +46,37 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">Contactos</h3>
+            <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4 sm:mb-5">
+              Contactos
+            </h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-rose-300 transition-colors group"
-                >
-                  <MessageCircle size={16} className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0" />
-                  WhatsApp
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-rose-300 transition-colors group"
-                >
-                  <Mail size={16} className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0" />
-                  {EMAIL}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-rose-300 transition-colors group"
-                >
-                  <Instagram size={16} className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0" />
-                  @yokcakes
-                </a>
-              </li>
-              <li>
-                <a
-                  href={FACEBOOK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-rose-300 transition-colors group"
-                >
-                  <Facebook size={16} className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0" />
-                  Yok Cakes
-                </a>
-              </li>
+              {[
+                { Icon: MessageCircle, label: 'WhatsApp', href: WHATSAPP_URL, external: true },
+                { Icon: Mail, label: EMAIL, href: `mailto:${EMAIL}`, external: false },
+                { Icon: Instagram, label: '@yokcakes', href: INSTAGRAM_URL, external: true },
+                { Icon: Facebook, label: 'Yok Cakes', href: FACEBOOK_URL, external: true },
+              ].map(({ Icon, label, href, external }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener noreferrer' : undefined}
+                    className="flex items-center gap-3 text-sm text-gray-400 hover:text-rose-300 transition-colors group min-h-[36px]"
+                  >
+                    <Icon
+                      size={16}
+                      className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0"
+                    />
+                    <span className="truncate">{label}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Bottom bar */}
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
           <p className="text-xs text-gray-600">
             © {new Date().getFullYear()} Yok Cakes. Todos os direitos reservados.
           </p>
