@@ -30,8 +30,8 @@ export default function About() {
               {/* Main image — 4:3 on mobile (less tall), 4:5 on sm+ */}
               <div className="relative rounded-3xl sm:rounded-4xl overflow-hidden shadow-card-hover aspect-[4/3] sm:aspect-[4/5]">
                 <Image
-                  src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&q=85"
-                  alt="Confeiteira Yok Cakes a decorar um bolo artesanal"
+                  src="/bolos/bolo-morango.png"
+                  alt="Bolo de Morango artesanal Yok Cakes — feito com ingredientes naturais selecionados"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"

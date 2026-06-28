@@ -143,8 +143,8 @@ export const PROCESS_STEPS = [
 export const TESTIMONIALS = [
   {
     name: 'Ana Rodrigues',
-    occasion: 'Casamento',
-    text: 'O bolo do nosso casamento foi absolutamente perfeito. Todos os convidados adoraram. A Yok Cakes superou todas as expectativas — tanto na apresentação como no sabor.',
+    occasion: 'Aniversário',
+    text: 'O bolo do aniversário da minha filha foi simplesmente perfeito. Todos os convidados adoraram e pediram o contacto. A Yok Cakes superou todas as expectativas — tanto na apresentação como no sabor.',
     rating: 5,
     location: 'Lisboa',
   },
@@ -164,8 +164,8 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Miguel Ferreira',
-    occasion: 'Evento Empresarial',
-    text: 'Encomendámos para um evento corporativo e o resultado foi extraordinário. Profissionalismo total, bolo delicioso e apresentação de alto nível. Recomendo vivamente.',
+    occasion: 'Festa de Aniversário',
+    text: 'Encomendei para a festa dos 50 anos do meu pai e o resultado foi extraordinário. Profissionalismo total, bolo delicioso e apresentação de alto nível. Recomendo vivamente.',
     rating: 5,
     location: 'Lisboa',
   },

@@ -7,8 +7,8 @@ import SectionTitle from '@/components/ui/SectionTitle'
 import { WHATSAPP_URL, INSTAGRAM_URL, FACEBOOK_URL, EMAIL } from '@/data/content'
 
 const OCCASIONS = [
-  'Aniversário', 'Casamento', 'Batizado', 'Chá de Bebé',
-  'Festa Infantil', 'Evento Empresarial', 'Surpresa Romântica', 'Outro',
+  'Aniversário', 'Festa Infantil', 'Chá de Bebé', 'Comunhão',
+  'Batizado', 'Festa Temática', 'Surpresa Especial', 'Outro',
 ]
 
 const SIZES = ['1 kg', '1,5 kg', '2 kg', '2,5 kg', '3 kg', '4 kg', '5 kg']
