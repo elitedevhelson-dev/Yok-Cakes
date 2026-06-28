@@ -21,8 +21,8 @@ export default function About() {
           {/* ── Image side ── */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: -32 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
@@ -57,10 +57,10 @@ export default function About() {
 
           {/* ── Text side ── */}
           <motion.div
-            initial={{ opacity: 0, x: 32 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
             className="space-y-6 sm:space-y-7"
           >
             <div>

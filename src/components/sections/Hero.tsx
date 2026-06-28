@@ -70,13 +70,12 @@ export default function Hero() {
             <div className="relative mx-auto"
               style={{ maxWidth: 'min(420px, 85vw)' }}
             >
-              {/* Glow ring */}
-              <div className="absolute inset-0 rounded-[44%_56%_62%_38%/42%_38%_62%_58%] bg-gradient-to-br from-rose-200 to-cream-200 blur-2xl opacity-55 scale-110" />
-
-              {/* Main blob image */}
+              {/* Main blob image — glow ring contained inside overflow-hidden */}
               <div className="relative rounded-[44%_56%_62%_38%/42%_38%_62%_58%] overflow-hidden shadow-2xl"
                 style={{ aspectRatio: '4/5' }}
               >
+                {/* Glow ring inside the clipped container */}
+                <div className="absolute inset-0 bg-gradient-to-br from-rose-200 to-cream-200 blur-2xl opacity-55 scale-110" />
                 <Image
                   src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=85"
                   alt="Bolo artesanal premium Yok Cakes"

@@ -17,7 +17,7 @@ export default function Flavors() {
           center
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {FLAVORS.map((flavor, i) => (
             <motion.div
               key={flavor.id}

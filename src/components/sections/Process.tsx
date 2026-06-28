@@ -58,8 +58,8 @@ export default function Process() {
               {PROCESS_STEPS.map((step, i) => (
                 <motion.div
                   key={step.step}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
                   className="relative"

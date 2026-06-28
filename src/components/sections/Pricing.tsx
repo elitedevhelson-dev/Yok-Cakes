@@ -26,7 +26,7 @@ export default function Pricing() {
 
         <div className="max-w-4xl mx-auto">
           {/* Main price cards — 2 cols on mobile, 4 on lg */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-4 mb-6 sm:mb-8">
             {PRICING.slice(0, 4).map((p, i) => (
               <motion.div
                 key={p.weight}
