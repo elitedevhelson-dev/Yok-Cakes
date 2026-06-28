@@ -40,12 +40,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'Yok Cakes' }],
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png', sizes: '64x64' },
     ],
     apple: [
-      { url: '/apple-icon.svg', type: 'image/svg+xml' },
+      { url: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
     ],
-    shortcut: '/icon.svg',
+    shortcut: '/icon.png',
   },
   creator: 'Yok Cakes',
   openGraph: {

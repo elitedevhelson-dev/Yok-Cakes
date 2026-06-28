@@ -12,13 +12,13 @@ export default function Footer() {
           <div className="space-y-4">
             {/* Logo + name */}
             <div className="flex items-center gap-3">
-              <div className="relative h-14 w-14 flex-shrink-0 rounded-xl overflow-hidden bg-white p-0.5">
+              <div className="relative h-16 w-16 flex-shrink-0">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Logótipo Yok Cakes"
                   fill
                   className="object-contain"
-                  sizes="56px"
+                  sizes="64px"
                   title="Yok Cakes"
                 />
               </div>

@@ -44,22 +44,20 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               aria-label="Yok Cakes — Página inicial"
             >
-              {/* Logo image */}
+              {/* Logo image — transparent PNG, sem fundo branco */}
               <div className="relative flex-shrink-0
-                h-[42px] w-[42px]
-                sm:h-[50px] sm:w-[50px]
-                lg:h-[60px] lg:w-[60px]
-                rounded-xl overflow-hidden
-                ring-1 ring-rose-100/50
+                h-[48px] w-[48px]
+                sm:h-[56px] sm:w-[56px]
+                lg:h-[66px] lg:w-[66px]
                 transition-transform duration-300 group-hover:scale-105"
               >
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Logótipo Yok Cakes"
                   fill
                   className="object-contain"
                   priority
-                  sizes="(max-width: 640px) 42px, (max-width: 1024px) 50px, 60px"
+                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 66px"
                   title="Yok Cakes"
                 />
               </div>
@@ -142,13 +140,13 @@ export default function Header() {
             {/* Drawer header */}
             <div className="flex items-center justify-between px-5 h-16 border-b border-rose-50">
               <div className="flex items-center gap-2.5">
-                <div className="relative h-9 w-9 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative h-10 w-10 flex-shrink-0">
                   <Image
-                    src="/logo.jpeg"
+                    src="/logo.png"
                     alt="Logótipo Yok Cakes"
                     fill
                     className="object-contain"
-                    sizes="36px"
+                    sizes="40px"
                   />
                 </div>
                 <span className="font-serif font-bold text-gray-900">Yok Cakes</span>
