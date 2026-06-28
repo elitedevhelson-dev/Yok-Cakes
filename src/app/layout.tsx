@@ -19,22 +19,24 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Yok Cakes | Bolos Artesanais Premium',
+    default: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
     template: '%s | Yok Cakes',
   },
   description:
-    'Bolos artesanais personalizados para todas as ocasiões. Ingredientes naturais, produção 100% artesanal e acabamento profissional. Aniversários, casamentos, batizados e muito mais.',
+    'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé, comunhões e datas especiais. Ingredientes naturais, produção 100% artesanal e acabamento profissional.',
   keywords: [
     'bolos personalizados',
-    'confeitaria premium',
-    'bolo de aniversário',
-    'bolo de casamento',
-    'bolos artesanais',
+    'bolo de aniversário personalizado',
+    'bolo para festa infantil',
+    'bolo chá de bebé',
+    'bolo de comunhão',
+    'bolos artesanais Lisboa',
     'bolo personalizado Lisboa',
     'Yok Cakes',
-    'confeitaria Lisboa',
-    'bolos para eventos',
-    'cake design',
+    'confeitaria artesanal Lisboa',
+    'cake design aniversário',
+    'bolos para festas',
+    'bolo temático',
   ],
   metadataBase: new URL('https://yokcakes.pt'),
   authors: [{ name: 'Yok Cakes' }],
@@ -53,9 +55,9 @@ export const metadata: Metadata = {
     locale: 'pt_PT',
     url: 'https://yokcakes.pt',
     siteName: 'Yok Cakes',
-    title: 'Yok Cakes | Bolos Artesanais Premium',
+    title: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
     description:
-      'Bolos artesanais personalizados para todos os seus momentos especiais. Feitos com amor e ingredientes selecionados.',
+      'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé e comunhões. Feitos com amor e ingredientes selecionados.',
     images: [
       {
         url: '/og-image.jpg',
@@ -67,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yok Cakes | Bolos Artesanais Premium',
-    description: 'Bolos artesanais personalizados para todos os seus momentos especiais.',
+    title: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
+    description: 'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé e comunhões.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -95,7 +97,7 @@ const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Bakery',
   name: 'Yok Cakes',
-  description: 'Confeitaria artesanal especializada em bolos personalizados premium',
+  description: 'Confeitaria artesanal especializada em bolos personalizados para aniversários, festas infantis, chá de bebé, comunhões e datas especiais.',
   url: 'https://yokcakes.pt',
   telephone: '+351-XXX-XXX-XXX',
   email: 'info@yokcakes.pt',
