@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Instagram, Facebook, Mail, MessageCircle, Heart } from 'lucide-react'
 import { INSTAGRAM_URL, FACEBOOK_URL, EMAIL, WHATSAPP_URL, NAV_LINKS } from '@/data/content'
 
@@ -7,25 +8,35 @@ export default function Footer() {
       <div className="container-custom py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 pb-10 sm:pb-12 border-b border-gray-800">
 
-          {/* Brand */}
+          {/* ── Brand ── */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center flex-shrink-0">
-                <span className="text-white text-xs font-serif font-bold">Y</span>
+            {/* Logo + name */}
+            <div className="flex items-center gap-3">
+              <div className="relative h-14 w-14 flex-shrink-0 rounded-xl overflow-hidden bg-white p-0.5">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Logótipo Yok Cakes"
+                  fill
+                  className="object-contain"
+                  sizes="56px"
+                  title="Yok Cakes"
+                />
               </div>
               <div className="flex flex-col -space-y-0.5">
-                <span className="font-serif font-bold text-xl text-white">Yok Cakes</span>
-                <span className="text-[9px] tracking-[0.25em] uppercase text-gold-400 font-medium">Bolos Artesanais</span>
+                <span className="font-serif font-bold text-xl text-white leading-none">Yok Cakes</span>
+                <span className="text-[9px] tracking-[0.25em] uppercase text-gold-400 font-semibold mt-1">
+                  Confeitaria Artesanal
+                </span>
               </div>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-[260px]">
-              Criamos momentos doces e inesquecíveis através de bolos artesanais feitos com
-              carinho e ingredientes premium.
+
+            <p className="text-sm text-gray-400 leading-relaxed max-w-[240px]">
+              Bolos personalizados para momentos especiais. Feitos com amor e ingredientes premium.
             </p>
             <p className="text-xs text-gray-500 italic font-serif">&quot;Amor em forma de bolo.&quot;</p>
           </div>
 
-          {/* Navigation */}
+          {/* ── Navigation ── */}
           <div>
             <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4 sm:mb-5">
               Navegação
@@ -44,7 +55,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* ── Contact ── */}
           <div>
             <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4 sm:mb-5">
               Contactos
@@ -66,6 +77,7 @@ export default function Footer() {
                     <Icon
                       size={16}
                       className="text-gray-600 group-hover:text-rose-400 transition-colors flex-shrink-0"
+                      aria-hidden="true"
                     />
                     <span className="truncate">{label}</span>
                   </a>
@@ -81,7 +93,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Yok Cakes. Todos os direitos reservados.
           </p>
           <p className="text-xs text-gray-600 flex items-center gap-1">
-            Feito com <Heart size={12} className="fill-rose-500 text-rose-500" /> em Portugal
+            Feito com <Heart size={12} className="fill-rose-500 text-rose-500" aria-hidden="true" /> em Portugal
           </p>
         </div>
       </div>

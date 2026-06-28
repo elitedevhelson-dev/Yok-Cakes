@@ -38,6 +38,15 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL('https://yokcakes.pt'),
   authors: [{ name: 'Yok Cakes' }],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.svg',
+  },
   creator: 'Yok Cakes',
   openGraph: {
     type: 'website',

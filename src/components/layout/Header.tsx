@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { NAV_LINKS, WHATSAPP_URL } from '@/data/content'
@@ -29,33 +30,53 @@ export default function Header() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-xl shadow-[0_1px_24px_rgba(201,169,110,0.12)] border-b border-cream-200'
+            ? 'bg-white/92 backdrop-blur-xl shadow-[0_1px_24px_rgba(233,30,140,0.08)] border-b border-rose-100/60'
             : 'bg-transparent'
         }`}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
+
+            {/* ── Logo ── */}
             <Link
               href="/"
-              className="flex items-center gap-2 group"
+              className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0"
               onClick={() => setMenuOpen(false)}
+              aria-label="Yok Cakes — Página inicial"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center shadow-rose">
-                <span className="text-white text-xs font-serif font-bold">Y</span>
+              {/* Logo image */}
+              <div className="relative flex-shrink-0
+                h-[42px] w-[42px]
+                sm:h-[50px] sm:w-[50px]
+                lg:h-[60px] lg:w-[60px]
+                rounded-xl overflow-hidden
+                ring-1 ring-rose-100/50
+                transition-transform duration-300 group-hover:scale-105"
+              >
+                <Image
+                  src="/logo.jpeg"
+                  alt="Logótipo Yok Cakes"
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="(max-width: 640px) 42px, (max-width: 1024px) 50px, 60px"
+                  title="Yok Cakes"
+                />
               </div>
+
+              {/* Brand name */}
               <div className="flex flex-col -space-y-0.5">
-                <span className="font-serif font-bold text-xl leading-none text-gray-900 group-hover:text-rose-600 transition-colors">
+                <span className="font-serif font-bold text-lg sm:text-xl leading-none text-gray-900 group-hover:text-rose-600 transition-colors duration-200">
                   Yok Cakes
                 </span>
-                <span className="text-[9px] tracking-[0.25em] uppercase text-gold-500 font-medium">
+                <span className="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase text-gold-500 font-semibold">
                   Bolos Artesanais
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
+            {/* ── Desktop Navigation ── */}
+            <nav className="hidden md:flex items-center gap-0.5" aria-label="Navegação principal">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
@@ -67,7 +88,7 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Desktop CTA + Mobile Menu */}
+            {/* ── Desktop CTA + Mobile Toggle ── */}
             <div className="flex items-center gap-3">
               <a
                 href={WHATSAPP_URL}
@@ -79,10 +100,11 @@ export default function Header() {
               </a>
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-cream-100 hover:bg-cream-200 text-gray-700 transition-colors"
-                aria-label="Menu"
+                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-cream-100 hover:bg-rose-50 text-gray-700 transition-colors"
+                aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+                aria-expanded={menuOpen}
               >
-                {menuOpen ? <X size={18} /> : <Menu size={18} />}
+                {menuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
               </button>
             </div>
           </div>
@@ -99,6 +121,7 @@ export default function Header() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
             onClick={() => setMenuOpen(false)}
+            aria-hidden="true"
           />
         )}
       </AnimatePresence>
@@ -112,17 +135,35 @@ export default function Header() {
             exit={{ x: '100%' }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="fixed top-0 right-0 bottom-0 z-50 w-[280px] bg-white shadow-2xl md:hidden flex flex-col"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegação"
           >
-            <div className="flex items-center justify-between px-6 h-16 border-b border-cream-100">
-              <span className="font-serif font-bold text-lg text-gray-900">Menu</span>
+            {/* Drawer header */}
+            <div className="flex items-center justify-between px-5 h-16 border-b border-rose-50">
+              <div className="flex items-center gap-2.5">
+                <div className="relative h-9 w-9 rounded-lg overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/logo.jpeg"
+                    alt="Logótipo Yok Cakes"
+                    fill
+                    className="object-contain"
+                    sizes="36px"
+                  />
+                </div>
+                <span className="font-serif font-bold text-gray-900">Yok Cakes</span>
+              </div>
               <button
                 onClick={() => setMenuOpen(false)}
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-cream-100 text-gray-600"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-cream-100 text-gray-600 hover:bg-rose-50 transition-colors"
+                aria-label="Fechar menu"
               >
-                <X size={16} />
+                <X size={16} aria-hidden="true" />
               </button>
             </div>
-            <nav className="flex flex-col p-6 gap-1 flex-1">
+
+            {/* Nav links */}
+            <nav className="flex flex-col p-5 gap-1 flex-1" aria-label="Menu mobile">
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.href}
@@ -131,13 +172,15 @@ export default function Header() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, duration: 0.3 }}
-                  className="px-4 py-3 text-gray-700 font-medium rounded-xl hover:bg-cream-50 hover:text-rose-600 transition-colors text-base"
+                  className="px-4 py-3 text-gray-700 font-medium rounded-xl hover:bg-rose-50 hover:text-rose-600 transition-colors text-base min-h-[48px] flex items-center"
                 >
                   {link.label}
                 </motion.a>
               ))}
             </nav>
-            <div className="p-6 border-t border-cream-100">
+
+            {/* Drawer CTA */}
+            <div className="p-5 border-t border-cream-100">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
