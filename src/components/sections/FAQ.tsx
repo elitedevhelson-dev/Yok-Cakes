@@ -15,7 +15,7 @@ export default function FAQ() {
         <div className="max-w-3xl mx-auto">
           <SectionTitle
             label="Perguntas Frequentes"
-            title="Temos as"
+            title="Tenho as"
             titleAccent="respostas"
             subtitle="Tudo o que precisa de saber antes de encomendar o seu bolo perfeito."
             center

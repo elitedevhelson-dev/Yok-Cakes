@@ -29,10 +29,10 @@ export default function Gallery() {
     <section id="galeria" className="section-padding bg-white">
       <div className="container-custom">
         <SectionTitle
-          label="O Nosso Portfolio"
+          label="O Meu Portfólio"
           title="Criações que"
           titleAccent="encantam"
-          subtitle="Cada bolo conta uma história. Deixe-se inspirar pelas nossas criações mais recentes."
+          subtitle="Cada bolo conta uma história. Deixe-se inspirar pelas minhas criações mais recentes."
           center
         />
 

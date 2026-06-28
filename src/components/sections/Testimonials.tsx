@@ -11,9 +11,9 @@ export default function Testimonials() {
       <div className="container-custom">
         <SectionTitle
           label="Testemunhos"
-          title="O que dizem os nossos"
+          title="O que dizem os meus"
           titleAccent="clientes"
-          subtitle="A melhor prova do nosso trabalho é a felicidade de quem já confiou em nós."
+          subtitle="A melhor prova do meu trabalho é a felicidade de quem já confiou em mim."
           center
         />
 

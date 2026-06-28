@@ -66,10 +66,10 @@ export default function About() {
             <div>
               <span className="section-label">
                 <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse-soft" />
-                A Nossa História
+                A Minha História
               </span>
               <h2 className="section-title">
-                Nascemos de uma{' '}
+                Nasci de uma{' '}
                 <em className="gradient-text not-italic font-serif">paixão</em>
                 <br />
                 por bolos perfeitos
@@ -83,13 +83,13 @@ export default function About() {
                 atenção ao detalhe e compromisso com a qualidade.
               </p>
               <p>
-                Acreditamos que um bolo não é apenas sobremesa — é a peça central de um
-                momento que ficará para sempre na memória. Por isso, tratamos cada encomenda
+                Acredito que um bolo não é apenas sobremesa — é a peça central de um
+                momento que ficará para sempre na memória. Por isso, trato cada encomenda
                 como se fosse única, porque é mesmo.
               </p>
               <p>
                 Com ingredientes cuidadosamente selecionados e uma produção 100% artesanal,
-                garantimos que cada bolo supere as suas expectativas — na aparência, no sabor
+                garanto que cada bolo supere as suas expectativas — na aparência, no sabor
                 e na experiência.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="btn-primary w-full sm:w-auto justify-center"
               >
-                Falar Connosco
+                Falar Comigo
               </a>
             </div>
           </motion.div>

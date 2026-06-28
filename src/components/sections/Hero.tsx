@@ -166,7 +166,7 @@ export default function Hero() {
               className="text-gray-500 leading-relaxed mb-8 sm:mb-10 max-w-[480px]"
               style={{ fontSize: 'clamp(0.95rem, 1.5vw + 0.4rem, 1.2rem)' }}
             >
-              Criamos experiências únicas para os seus momentos mais especiais.
+              Crio experiências únicas para os seus momentos mais especiais.
               Bolos artesanais com ingredientes selecionados e acabamento profissional.
             </motion.p>
 

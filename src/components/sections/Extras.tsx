@@ -12,7 +12,7 @@ export default function Extras() {
           label="Personalização"
           title="Detalhes que fazem a"
           titleAccent="diferença"
-          subtitle="Eleve o seu bolo ao próximo nível com os nossos extras exclusivos. Cada detalhe pensado para impressionar."
+          subtitle="Eleve o seu bolo ao próximo nível com estes extras exclusivos. Cada detalhe pensado para o impressionar."
           center
         />
 
@@ -41,7 +41,7 @@ export default function Extras() {
         </div>
 
         <div className="text-center">
-          <p className="text-gray-400 text-sm mb-5">Não encontra o que procura? Temos ainda mais opções!</p>
+          <p className="text-gray-400 text-sm mb-5">Não encontra o que procura? Tenho ainda mais opções!</p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
             Perguntar sobre extras
           </a>

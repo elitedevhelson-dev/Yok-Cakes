@@ -1,5 +1,5 @@
 export const WHATSAPP_NUMBER = '351XXXXXXXXX'
-export const WHATSAPP_MESSAGE = 'Olá%20Yok%20Cakes!%20Gostaria%20de%20encomendar%20um%20bolo.%20Podem%20ajudar-me%3F'
+export const WHATSAPP_MESSAGE = 'Olá%20Yok%20Cakes!%20Gostaria%20de%20encomendar%20um%20bolo.%20Pode%20ajudar-me%3F'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`
 export const INSTAGRAM_URL = 'https://instagram.com/yokcakes'
 export const FACEBOOK_URL = 'https://facebook.com/yokcakes'
@@ -111,25 +111,25 @@ export const PROCESS_STEPS = [
   {
     step: '01',
     title: 'Escolhe o Bolo',
-    description: 'Navega pelos nossos sabores e estilos. Deixa-te inspirar pela galeria.',
+    description: 'Navega pelos meus sabores e estilos. Deixa-te inspirar pela galeria.',
     icon: '🎂',
   },
   {
     step: '02',
     title: 'Conta a Tua Ideia',
-    description: 'Fala connosco pelo WhatsApp e partilha a tua visão para o bolo perfeito.',
+    description: 'Fala comigo pelo WhatsApp e partilha a tua visão para o bolo perfeito.',
     icon: '💬',
   },
   {
     step: '03',
     title: 'Recebe Orçamento',
-    description: 'Elaboramos um orçamento personalizado sem compromisso, rapidamente.',
+    description: 'Elaboro um orçamento personalizado, sem compromisso e rapidamente.',
     icon: '📋',
   },
   {
     step: '04',
     title: 'Produção Artesanal',
-    description: 'O teu bolo é criado com ingredientes premium e muito amor.',
+    description: 'O teu bolo é feito à mão, com ingredientes premium e muito amor.',
     icon: '👩‍🍳',
   },
   {
@@ -144,7 +144,7 @@ export const TESTIMONIALS = [
   {
     name: 'Ana Rodrigues',
     occasion: 'Casamento',
-    text: 'O bolo do nosso casamento foi absolutamente perfeito. Todos os convidados adoraram. A Yok Cakes superou todas as nossas expectativas — tanto na apresentação como no sabor.',
+    text: 'O bolo do nosso casamento foi absolutamente perfeito. Todos os convidados adoraram. A Yok Cakes superou todas as expectativas — tanto na apresentação como no sabor.',
     rating: 5,
     location: 'Lisboa',
   },
@@ -158,14 +158,14 @@ export const TESTIMONIALS = [
   {
     name: 'Sofia Martins',
     occasion: 'Batizado',
-    text: 'Serviço impecável desde o primeiro contacto até à entrega. O bolo chegou perfeito, na hora certa. Obrigada por tornarem o batizado do meu filho ainda mais especial.',
+    text: 'Serviço impecável desde o primeiro contacto até à entrega. O bolo chegou perfeito, na hora certa. Obrigada por tornares o batizado do meu filho ainda mais especial.',
     rating: 5,
     location: 'Oeiras',
   },
   {
     name: 'Miguel Ferreira',
     occasion: 'Evento Empresarial',
-    text: 'Encomendamos para um evento corporativo e o resultado foi extraordinário. Profissionalismo total, bolo delicioso e apresentação de alto nível. Recomendo vivamente.',
+    text: 'Encomendámos para um evento corporativo e o resultado foi extraordinário. Profissionalismo total, bolo delicioso e apresentação de alto nível. Recomendo vivamente.',
     rating: 5,
     location: 'Lisboa',
   },
@@ -179,7 +179,7 @@ export const TESTIMONIALS = [
   {
     name: 'Carlos Santos',
     occasion: 'Surpresa Romântica',
-    text: 'Pedi um bolo para surpreender a minha namorada e a reação dela disse tudo. O cuidado nos detalhes é impressionante. Muito obrigado pela vossa dedicação.',
+    text: 'Pedi um bolo para surpreender a minha namorada e a reação dela disse tudo. O cuidado nos detalhes é impressionante. Muito obrigado pela tua dedicação.',
     rating: 5,
     location: 'Setúbal',
   },
@@ -189,39 +189,39 @@ export const FAQS = [
   {
     question: 'Como faço uma encomenda?',
     answer:
-      'É muito simples! Entre em contacto connosco pelo WhatsApp, Instagram ou formulário do website. Partilhe a sua ideia, a data do evento e as preferências de sabor. Nós tratamos de tudo.',
+      'É muito simples! Entre em contacto comigo pelo WhatsApp, Instagram ou formulário do website. Partilhe a sua ideia, a data do evento e as preferências de sabor. Eu trato de tudo com atenção e carinho.',
   },
   {
     question: 'Com quanto tempo de antecedência devo encomendar?',
     answer:
-      'Recomendamos um mínimo de 7 dias de antecedência para bolos padrão e 14 dias para bolos com decoração mais elaborada ou para eventos de grande dimensão. Para datas festivas (Natal, Páscoa), pedimos que encomende com 3–4 semanas de antecedência.',
+      'Recomendo um mínimo de 7 dias de antecedência para bolos padrão e 14 dias para bolos com decoração mais elaborada ou para eventos de grande dimensão. Para datas festivas (Natal, Páscoa), peço que encomende com 3–4 semanas de antecedência.',
   },
   {
     question: 'Posso personalizar completamente o meu bolo?',
     answer:
-      'Absolutamente! Cada bolo é único. Pode personalizar o sabor, o tamanho, as cores, a decoração, o topper e qualquer outro detalhe. Trabalhamos para tornar a sua visão realidade.',
+      'Absolutamente! Cada bolo é único. Pode personalizar o sabor, o tamanho, as cores, a decoração, o topper e qualquer outro detalhe. Trabalho para tornar a sua visão em realidade.',
   },
   {
     question: 'Como funciona a entrega?',
     answer:
-      'Fazemos entregas mediante consulta e disponibilidade. O valor e as condições de entrega dependem da localização. Também pode recolher pessoalmente na nossa confeitaria com marcação prévia.',
+      'Faço entregas mediante consulta e disponibilidade. O valor e as condições de entrega dependem da localização. Também pode vir recolher pessoalmente ao meu atelier, com marcação prévia.',
   },
   {
     question: 'Quais são os métodos de pagamento?',
     answer:
-      'Aceitamos transferência bancária e MB Way. Pedimos um sinal de 50% no momento da confirmação da encomenda, sendo o restante pago até 48h antes da data de entrega.',
+      'Aceito transferência bancária e MB Way. Peço um sinal de 50% no momento da confirmação da encomenda, sendo o restante pago até 48h antes da data de entrega.',
   },
   {
     question: 'Os ingredientes são naturais?',
     answer:
-      'Sim! Trabalhamos apenas com ingredientes de qualidade selecionados. Sem corantes artificiais. Todos os bolos são feitos artesanalmente, sem pressa e com muito carinho.',
+      'Sim! Trabalho apenas com ingredientes de qualidade selecionados, sem corantes artificiais. Cada bolo é feito artesanalmente, sem pressa e com muito carinho.',
   },
 ]
 
 export const WHY_US = [
   {
     title: 'Ingredientes Selecionados',
-    description: 'Utilizamos apenas ingredientes premium, frescos e de qualidade, sem corantes artificiais.',
+    description: 'Utilizo apenas ingredientes premium, frescos e de qualidade, sem corantes artificiais.',
     icon: 'Leaf',
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
@@ -235,7 +235,7 @@ export const WHY_US = [
   },
   {
     title: 'Personalização Total',
-    description: 'Do sabor à decoração, criamos o bolo exatamente como imagina, sem compromissos.',
+    description: 'Do sabor à decoração, crio o bolo exatamente como imagina, sem compromissos.',
     icon: 'Sparkles',
     color: 'text-gold-600',
     bg: 'bg-amber-50',
@@ -255,8 +255,8 @@ export const WHY_US = [
     bg: 'bg-purple-50',
   },
   {
-    title: 'Suporte Dedicado',
-    description: 'Acompanhamos todo o processo, do orçamento à entrega, com atenção personalizada.',
+    title: 'Atenção Personalizada',
+    description: 'Acompanho todo o processo, do orçamento à entrega, com dedicação e cuidado total.',
     icon: 'MessageCircle',
     color: 'text-teal-600',
     bg: 'bg-teal-50',

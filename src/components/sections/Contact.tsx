@@ -40,7 +40,7 @@ export default function Contact() {
     <section id="contactos" className="section-padding bg-section-gradient">
       <div className="container-custom">
         <SectionTitle
-          label="Fale Connosco"
+          label="Fale Comigo"
           title="Vamos criar o seu"
           titleAccent="bolo perfeito"
           subtitle="Entre em contacto hoje e dê o primeiro passo para um momento inesquecível."
@@ -200,7 +200,7 @@ export default function Contact() {
                     </button>
 
                     <p className="text-xs text-center text-gray-400">
-                      A mensagem será enviada diretamente para o nosso WhatsApp
+                      A mensagem será enviada diretamente para o meu WhatsApp
                     </p>
                   </form>
                 </>
@@ -216,7 +216,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-gray-900 mb-2">Mensagem enviada!</h3>
                     <p className="text-gray-500 text-sm max-w-xs">
-                      O WhatsApp foi aberto com a sua mensagem. Respondemos em breve com o orçamento.
+                      O WhatsApp foi aberto com a sua mensagem. Respondo em breve com o seu orçamento.
                     </p>
                   </div>
                   <button onClick={() => setSent(false)} className="btn-secondary text-sm">
