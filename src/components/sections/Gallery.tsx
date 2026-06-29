@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
-import { GALLERY_IMAGES, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/data/content'
+import { GALLERY_IMAGES, INSTAGRAM_URL } from '@/data/content'
 
 const PER_PAGE = 12
 const INTERVAL = 5000
@@ -164,9 +164,6 @@ export default function Gallery() {
             </button>
           </div>
 
-          <p className="text-xs text-gray-400">
-            {TOTAL} criações · roda automaticamente a cada 5 segundos
-          </p>
         </div>
 
         {/* Instagram CTA */}
@@ -182,10 +179,9 @@ export default function Gallery() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-rose-500 hover:from-purple-700 hover:to-rose-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-rose-500 hover:from-purple-700 hover:to-rose-600 text-white font-semibold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
           >
             Ver mais no Instagram
-            <span className="text-sm opacity-80">{INSTAGRAM_HANDLE}</span>
           </a>
         </motion.div>
       </div>

@@ -10,7 +10,6 @@ const Flavors = dynamic(() => import('@/components/sections/Flavors'))
 const BolosPersonalizados = dynamic(() => import('@/components/sections/BolosPersonalizados'))
 const BolosCaseiros = dynamic(() => import('@/components/sections/BolosCaseiros'))
 const Pricing = dynamic(() => import('@/components/sections/Pricing'))
-const Extras = dynamic(() => import('@/components/sections/Extras'))
 const Process = dynamic(() => import('@/components/sections/Process'))
 const Testimonials = dynamic(() => import('@/components/sections/Testimonials'))
 const FAQ = dynamic(() => import('@/components/sections/FAQ'))
@@ -30,7 +29,6 @@ export default function Home() {
         <BolosPersonalizados />
         <BolosCaseiros />
         <Pricing />
-        <Extras />
         <Process />
         <Testimonials />
         <FAQ />
