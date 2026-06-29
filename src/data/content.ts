@@ -352,6 +352,65 @@ export const GALLERY_IMAGES = [
   },
 ]
 
+export const BOLOS_PERSONALIZADOS = [
+  {
+    id: 1,
+    name: 'Bolo Brigadeiro',
+    src: '/bolos/bolo-brigadeiro.png',
+    description: 'Bolo personalizado com acabamento elegante, recheado e coberto com brigadeiro gourmet. Ideal para aniversários e celebrações especiais.',
+    weight: '2,5 kg',
+    price: 62,
+  },
+  {
+    id: 2,
+    name: 'Drip Cake',
+    src: '/bolos/drip-cake.png',
+    description: 'Bolo moderno decorado com efeito drip e acabamento premium, perfeito para aniversários, festas e eventos especiais.',
+    weight: '2 kg',
+    price: 55,
+  },
+  {
+    id: 3,
+    name: 'Bolo Cachêpo com Glitter',
+    src: '/bolos/bolo-cachepo-glitter.png',
+    description: 'Bolo decorado em estilo cachêpo com acabamento em glitter alimentar, proporcionando um visual elegante e sofisticado.',
+    weight: '3 kg',
+    price: 75,
+  },
+  {
+    id: 4,
+    name: 'Bolo Degradê Lilás',
+    src: '/bolos/bolo-degrade-lilas.png',
+    description: 'Bolo com decoração em degradê lilás, perfeito para aniversários, chás de bebé e celebrações delicadas.',
+    weight: '1,5 kg',
+    price: 40,
+  },
+  {
+    id: 5,
+    name: 'Bolo Cachêpo Lateral',
+    src: '/bolos/bolo-cachepo-lateral.png',
+    description: 'Bolo premium em estilo cachêpo lateral, ideal para festas maiores e eventos familiares.',
+    weight: '5 kg',
+    price: 110,
+  },
+  {
+    id: 6,
+    name: 'Naked Cake',
+    src: '/bolos/bolo-neked-cake.png',
+    description: 'Naked Cake com decoração minimalista e elegante, perfeito para quem procura um estilo moderno e sofisticado.',
+    weight: '1 kg',
+    price: 32,
+  },
+  {
+    id: 7,
+    name: 'Bolo de Morango',
+    src: '/bolos/bolo-morango.png',
+    description: 'Bolo personalizado decorado com morangos frescos e acabamento artesanal, combinando elegância e sabor.',
+    weight: '2 kg',
+    price: 60,
+  },
+]
+
 export const BOLOS_CASEIROS = [
   {
     id: 1,
