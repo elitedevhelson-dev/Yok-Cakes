@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { MessageCircle, Instagram, Facebook, Mail, MapPin, Send, CheckCircle } from 'lucide-react'
+import { MessageCircle, Instagram, Mail, MapPin, Send, CheckCircle } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
-import { WHATSAPP_URL, INSTAGRAM_URL, FACEBOOK_URL, EMAIL } from '@/data/content'
+import { WHATSAPP_URL, WHATSAPP_NUMBER, INSTAGRAM_URL, INSTAGRAM_HANDLE, EMAIL, LOCATION } from '@/data/content'
 
 const OCCASIONS = [
   'Aniversário', 'Festa Infantil', 'Chá de Bebé', 'Comunhão',
@@ -20,18 +20,17 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const msg = encodeURIComponent(
-      `Olá Yok Cakes! 👋\n\nNome: ${form.name}\nEmail: ${form.email}\nTelefone: ${form.phone}\nOcasião: ${form.occasion}\nTamanho: ${form.size}\n\n${form.message}`
+      `Olá! 👋\n\nNome: ${form.name}\nEmail: ${form.email}\nTelefone: ${form.phone}\nOcasião: ${form.occasion}\nTamanho: ${form.size}\n\n${form.message}`
     )
-    window.open(`https://wa.me/351XXXXXXXXX?text=${msg}`, '_blank')
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank')
     setSent(true)
   }
 
   const CONTACTS = [
-    { icon: MessageCircle, label: 'WhatsApp', value: '+351 XXX XXX XXX', href: WHATSAPP_URL, color: 'text-emerald-600', bg: 'bg-emerald-50' },
-    { icon: Instagram, label: 'Instagram', value: '@yokcakes', href: INSTAGRAM_URL, color: 'text-purple-600', bg: 'bg-purple-50' },
-    { icon: Facebook, label: 'Facebook', value: 'Yok Cakes', href: FACEBOOK_URL, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { icon: MessageCircle, label: 'WhatsApp', value: '+351 912 775 295', href: WHATSAPP_URL, color: 'text-emerald-600', bg: 'bg-emerald-50' },
+    { icon: Instagram, label: 'Instagram', value: INSTAGRAM_HANDLE, href: INSTAGRAM_URL, color: 'text-purple-600', bg: 'bg-purple-50' },
     { icon: Mail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}`, color: 'text-rose-600', bg: 'bg-rose-50' },
-    { icon: MapPin, label: 'Localização', value: 'Lisboa, Portugal', href: '#', color: 'text-gold-600', bg: 'bg-amber-50' },
+    { icon: MapPin, label: 'Localização', value: LOCATION, href: '#', color: 'text-gold-600', bg: 'bg-amber-50' },
   ]
 
   const inputClass = "w-full px-4 py-3 min-h-[48px] rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
@@ -227,6 +226,33 @@ export default function Contact() {
             </div>
           </div>
         </div>
+
+        {/* Map */}
+        <motion.div
+          className="mt-10 sm:mt-14 rounded-2xl sm:rounded-3xl overflow-hidden shadow-card-hover"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="bg-cream-50 px-5 sm:px-8 py-4 sm:py-5 border-b border-cream-200 flex items-center gap-3">
+            <MapPin className="w-5 h-5 text-rose-500 flex-shrink-0" />
+            <div>
+              <p className="font-semibold text-gray-900 text-sm">Zona de Serviço</p>
+              <p className="text-xs text-gray-500">{LOCATION}</p>
+            </div>
+          </div>
+          <iframe
+            src="https://maps.google.com/maps?q=Vila+Nova+de+Gaia,+Portugal&t=m&z=13&ie=UTF8&iwloc=B&output=embed"
+            width="100%"
+            height="320"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Vila Nova de Gaia — Zona de Serviço da Yok Cakes"
+          />
+        </motion.div>
       </div>
     </section>
   )

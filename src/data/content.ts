@@ -1,9 +1,11 @@
-export const WHATSAPP_NUMBER = '351XXXXXXXXX'
-export const WHATSAPP_MESSAGE = 'Olá%20Yok%20Cakes!%20Gostaria%20de%20encomendar%20um%20bolo.%20Pode%20ajudar-me%3F'
+export const WHATSAPP_NUMBER = '351912775295'
+export const WHATSAPP_MESSAGE = encodeURIComponent('Olá! Vi o seu website e gostaria de pedir informações sobre um bolo personalizado.')
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`
-export const INSTAGRAM_URL = 'https://instagram.com/yokcakes'
+export const INSTAGRAM_URL = 'https://instagram.com/yokcakesoficial'
+export const INSTAGRAM_HANDLE = '@yokcakesoficial'
 export const FACEBOOK_URL = 'https://facebook.com/yokcakes'
-export const EMAIL = 'info@yokcakes.pt'
+export const EMAIL = 'yoknaldineo@gmail.com'
+export const LOCATION = 'Vila Nova de Gaia, Portugal'
 
 export const NAV_LINKS = [
   { label: 'Sobre', href: '#sobre' },
@@ -142,46 +144,34 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    name: 'Ana Rodrigues',
-    occasion: 'Aniversário',
-    text: 'O bolo do aniversário da minha filha foi simplesmente perfeito. Todos os convidados adoraram e pediram o contacto. A Yok Cakes superou todas as expectativas — tanto na apresentação como no sabor.',
+    id: 1,
+    text: 'Confirmo que os bolos são mesmo feitos com amor. Simplesmente incrível. A confeiteira é muito amável e prestativa. Recomendo a 1000%.',
     rating: 5,
-    location: 'Lisboa',
   },
   {
-    name: 'Pedro Alves',
-    occasion: 'Aniversário',
-    text: 'Encomendei um bolo Red Velvet para o aniversário da minha mãe e ela ficou emocionada. O sabor é incomparável e a decoração estava deslumbrante. Vou encomendar sempre aqui!',
+    id: 2,
+    text: 'Encomendei, provei e aprovei. Texturas incríveis, sabor único, atenção aos detalhes e entrega exatamente no tempo combinado.',
     rating: 5,
-    location: 'Cascais',
   },
   {
-    name: 'Sofia Martins',
-    occasion: 'Batizado',
-    text: 'Serviço impecável desde o primeiro contacto até à entrega. O bolo chegou perfeito, na hora certa. Obrigada por tornares o batizado do meu filho ainda mais especial.',
+    id: 3,
+    text: 'Já tive oportunidade de encomendar vários sabores e o meu preferido é massa de leite com recheio belga e morangos frescos. Uma delícia! Recomendo 100%.',
     rating: 5,
-    location: 'Oeiras',
   },
   {
-    name: 'Miguel Ferreira',
-    occasion: 'Festa de Aniversário',
-    text: 'Encomendei para a festa dos 50 anos do meu pai e o resultado foi extraordinário. Profissionalismo total, bolo delicioso e apresentação de alto nível. Recomendo vivamente.',
+    id: 4,
+    text: 'Já provei e aprovei! Bolo delicioso, decoração linda. Super recomendo!',
     rating: 5,
-    location: 'Lisboa',
   },
   {
-    name: 'Inês Costa',
-    occasion: 'Chá de Bebé',
-    text: 'O bolo para o meu chá de bebé estava absolutamente lindo e delicioso. A personalização foi perfeita e o atendimento foi carinhoso do início ao fim.',
+    id: 5,
+    text: 'Já provei e recomendo de olhos fechados! Bolos deliciosos, lindos e feitos com muito carinho.',
     rating: 5,
-    location: 'Sintra',
   },
   {
-    name: 'Carlos Santos',
-    occasion: 'Surpresa Romântica',
-    text: 'Pedi um bolo para surpreender a minha namorada e a reação dela disse tudo. O cuidado nos detalhes é impressionante. Muito obrigado pela tua dedicação.',
+    id: 6,
+    text: 'Os bolos são incríveis, muito saborosos e feitos com enorme dedicação. Recomendo.',
     rating: 5,
-    location: 'Setúbal',
   },
 ]
 
