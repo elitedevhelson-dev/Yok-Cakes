@@ -174,7 +174,7 @@ export default function Gallery() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-400 mb-4 text-sm">Quer ver mais criações?</p>
+          <p className="text-gray-500 mb-4 text-sm">Quer ver mais criações?</p>
           <a
             href={INSTAGRAM_URL}
             target="_blank"

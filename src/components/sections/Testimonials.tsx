@@ -151,7 +151,7 @@ export default function Testimonials() {
             ))}
           </div>
           <p className="font-serif text-5xl font-bold text-gray-900">5.0</p>
-          <p className="text-gray-400 text-sm">Avaliações reais de clientes satisfeitos</p>
+          <p className="text-gray-500 text-sm">Avaliações reais de clientes satisfeitos</p>
         </motion.div>
       </div>
     </section>

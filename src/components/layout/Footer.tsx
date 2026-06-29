@@ -75,7 +75,7 @@ export default function Footer() {
                 { Icon: MessageCircle, label: 'WhatsApp', href: WHATSAPP_URL, external: true },
                 { Icon: Mail, label: EMAIL, href: `mailto:${EMAIL}`, external: false },
                 { Icon: Instagram, label: INSTAGRAM_HANDLE, href: INSTAGRAM_URL, external: true },
-                { Icon: MapPin, label: LOCATION, href: '#', external: false },
+                { Icon: MapPin, label: LOCATION, href: 'https://maps.google.com/?q=Vila+Nova+de+Gaia,Portugal', external: true },
               ].map(({ Icon, label, href, external }) => (
                 <li key={label}>
                   <a
