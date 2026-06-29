@@ -38,9 +38,10 @@ export default function WhatsAppButton() {
               >
                 <button
                   onClick={() => setShowTooltip(false)}
+                  aria-label="Fechar mensagem"
                   className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center"
                 >
-                  <X size={10} />
+                  <X size={10} aria-hidden="true" />
                 </button>
                 <p className="text-sm font-semibold text-gray-900 leading-tight">Fale comigo! 👋</p>
                 <p className="text-xs text-gray-500 mt-0.5">Resposta rápida pelo WhatsApp</p>
@@ -58,7 +59,7 @@ export default function WhatsAppButton() {
             whileTap={{ scale: 0.95 }}
             aria-label="Contactar pelo WhatsApp"
           >
-            <MessageCircle size={26} />
+            <MessageCircle size={26} aria-hidden="true" />
           </motion.a>
         </motion.div>
       )}

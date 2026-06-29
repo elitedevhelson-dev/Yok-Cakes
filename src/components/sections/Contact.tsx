@@ -30,7 +30,7 @@ export default function Contact() {
     { icon: MessageCircle, label: 'WhatsApp', value: '+351 912 775 295', href: WHATSAPP_URL, color: 'text-emerald-600', bg: 'bg-emerald-50' },
     { icon: Instagram, label: 'Instagram', value: INSTAGRAM_HANDLE, href: INSTAGRAM_URL, color: 'text-purple-600', bg: 'bg-purple-50' },
     { icon: Mail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}`, color: 'text-rose-600', bg: 'bg-rose-50' },
-    { icon: MapPin, label: 'Localização', value: LOCATION, href: '#', color: 'text-gold-600', bg: 'bg-amber-50' },
+    { icon: MapPin, label: 'Localização', value: LOCATION, href: 'https://maps.google.com/?q=Vila+Nova+de+Gaia,Portugal', color: 'text-gold-600', bg: 'bg-amber-50' },
   ]
 
   const inputClass = "w-full px-4 py-3 min-h-[48px] rounded-xl border border-cream-200 bg-cream-50 text-gray-900 text-sm placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-200 focus:border-rose-300 transition-all"
@@ -65,7 +65,7 @@ export default function Contact() {
                       <c.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${c.color}`} />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs font-semibold text-gray-400 uppercase tracking-wide">{c.label}</p>
+                      <p className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-wide">{c.label}</p>
                       <p className="text-sm font-medium text-gray-900 group-hover:text-rose-600 transition-colors truncate">{c.value}</p>
                     </div>
                   </a>
@@ -106,6 +106,7 @@ export default function Contact() {
                         </label>
                         <input
                           id="contact-name"
+                          name="name"
                           required
                           type="text"
                           value={form.name}
@@ -121,6 +122,7 @@ export default function Contact() {
                         </label>
                         <input
                           id="contact-phone"
+                          name="tel"
                           type="tel"
                           value={form.phone}
                           onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -137,6 +139,7 @@ export default function Contact() {
                       </label>
                       <input
                         id="contact-email"
+                        name="email"
                         required
                         type="email"
                         value={form.email}
@@ -154,6 +157,7 @@ export default function Contact() {
                         </label>
                         <select
                           id="contact-occasion"
+                          name="occasion"
                           value={form.occasion}
                           onChange={(e) => setForm({ ...form, occasion: e.target.value })}
                           className={inputClass}
@@ -168,6 +172,7 @@ export default function Contact() {
                         </label>
                         <select
                           id="contact-size"
+                          name="size"
                           value={form.size}
                           onChange={(e) => setForm({ ...form, size: e.target.value })}
                           className={inputClass}
@@ -184,6 +189,7 @@ export default function Contact() {
                       </label>
                       <textarea
                         id="contact-message"
+                        name="message"
                         required
                         rows={4}
                         value={form.message}
@@ -198,7 +204,7 @@ export default function Contact() {
                       Enviar pelo WhatsApp
                     </button>
 
-                    <p className="text-xs text-center text-gray-400">
+                    <p className="text-xs text-center text-gray-500">
                       A mensagem será enviada diretamente para o meu WhatsApp
                     </p>
                   </form>

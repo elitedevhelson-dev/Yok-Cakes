@@ -46,13 +46,13 @@ export default function Pricing() {
                     Popular
                   </div>
                 )}
-                <p className={`text-xs sm:text-sm font-semibold mb-1 ${p.popular ? 'text-rose-100' : 'text-gray-400'}`}>
+                <p className={`text-xs sm:text-sm font-semibold mb-1 ${p.popular ? 'text-rose-100' : 'text-gray-500'}`}>
                   {p.weight}
                 </p>
                 <p className={`font-serif text-3xl sm:text-4xl font-bold leading-none mb-1 ${p.popular ? 'text-white' : 'text-gray-900'}`}>
                   {p.price}€
                 </p>
-                <p className={`text-[10px] sm:text-xs mt-2 ${p.popular ? 'text-rose-100' : 'text-gray-400'}`}>
+                <p className={`text-[10px] sm:text-xs mt-2 ${p.popular ? 'text-rose-100' : 'text-gray-500'}`}>
                   {p.serves}
                 </p>
               </motion.div>
@@ -67,7 +67,7 @@ export default function Pricing() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-cream-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-cream-200 mb-6 sm:mb-8"
           >
-            <p className="text-xs sm:text-sm font-semibold text-gray-400 mb-3 sm:mb-4 uppercase tracking-wider">
+            <p className="text-xs sm:text-sm font-semibold text-gray-500 mb-3 sm:mb-4 uppercase tracking-wider">
               Tamanhos adicionais
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
@@ -75,7 +75,7 @@ export default function Pricing() {
                 <div key={p.weight} className="text-center py-1">
                   <p className="font-serif text-2xl sm:text-3xl font-bold text-gray-900">{p.price}€</p>
                   <p className="text-xs sm:text-sm font-semibold text-gray-500 mt-0.5">{p.weight}</p>
-                  <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5">{p.serves}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">{p.serves}</p>
                 </div>
               ))}
             </div>
@@ -106,7 +106,7 @@ export default function Pricing() {
 
           {/* CTA */}
           <div className="text-center">
-            <p className="text-gray-400 text-sm mb-5">
+            <p className="text-gray-500 text-sm mb-5">
               Preço de extras a partir de 5€ · Entrega mediante consulta
             </p>
             <a

@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     'bolo temático personalizado',
   ],
   metadataBase: new URL('https://yokcakes.pt'),
+  alternates: {
+    canonical: 'https://yokcakes.pt',
+  },
   authors: [{ name: 'Yok Cakes' }],
   icons: {
     icon: [
@@ -91,7 +94,6 @@ export const viewport: Viewport = {
   themeColor: '#E91E8C',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
 
 const schemaOrg = {

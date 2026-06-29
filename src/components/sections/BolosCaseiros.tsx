@@ -100,7 +100,7 @@ export default function BolosCaseiros() {
                 {/* Footer — price + button */}
                 <div className="flex items-center justify-between gap-3 pt-3 border-t border-cream-100">
                   <div>
-                    <p className="text-xs text-gray-400 font-medium leading-none mb-0.5">Preço</p>
+                    <p className="text-xs text-gray-500 font-medium leading-none mb-0.5">Preço</p>
                     <p className="font-serif text-2xl font-bold text-rose-600 leading-none">
                       {bolo.price}&thinsp;€
                     </p>

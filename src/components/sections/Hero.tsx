@@ -99,7 +99,7 @@ export default function Hero() {
                   ))}
                   <span className="text-xs sm:text-sm font-bold text-gray-900 ml-1">5.0</span>
                 </div>
-                <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5">500+ avaliações</p>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">500+ avaliações</p>
               </motion.div>
 
               {/* Floating: Handmade */}
@@ -112,7 +112,7 @@ export default function Hero() {
                   <Heart className="w-4 h-4 sm:w-5 sm:h-5 fill-rose-400 text-rose-400 flex-shrink-0" />
                   <div>
                     <p className="text-xs sm:text-sm font-bold text-gray-900 leading-none">Artesanal</p>
-                    <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5">Feito com amor</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500 mt-0.5">Feito com amor</p>
                   </div>
                 </div>
               </motion.div>
@@ -201,7 +201,7 @@ export default function Hero() {
               ].map((s) => (
                 <div key={s.label}>
                   <p className="text-xl sm:text-2xl font-bold font-serif text-rose-600 leading-none">{s.value}</p>
-                  <p className="text-xs sm:text-sm text-gray-400 font-medium mt-1">{s.label}</p>
+                  <p className="text-xs sm:text-sm text-gray-500 font-medium mt-1">{s.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -214,7 +214,7 @@ export default function Hero() {
         style={{ opacity: heroOpacity }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none hidden sm:flex"
       >
-        <span className="text-[10px] font-medium text-gray-400 tracking-[0.2em] uppercase">Scroll</span>
+        <span className="text-[10px] font-medium text-gray-500 tracking-[0.2em] uppercase">Scroll</span>
         <motion.div
           className="w-px h-10 bg-gradient-to-b from-gray-400 to-transparent"
           animate={{ scaleY: [1, 0.4, 1], originY: 0 }}
