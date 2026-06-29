@@ -211,7 +211,7 @@ export const FAQS = [
 export const WHY_US = [
   {
     title: 'Ingredientes Selecionados',
-    description: 'Utilizo apenas ingredientes premium, frescos e de qualidade, sem corantes artificiais.',
+    description: 'Seleciono cuidadosamente ingredientes de qualidade para criar bolos saborosos, frescos e preparados com todo o cuidado em cada detalhe.',
     icon: 'Leaf',
     color: 'text-emerald-600',
     bg: 'bg-emerald-50',
