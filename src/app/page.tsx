@@ -7,6 +7,7 @@ const About = dynamic(() => import('@/components/sections/About'))
 const WhyUs = dynamic(() => import('@/components/sections/WhyUs'))
 const Gallery = dynamic(() => import('@/components/sections/Gallery'))
 const Flavors = dynamic(() => import('@/components/sections/Flavors'))
+const BolosCaseiros = dynamic(() => import('@/components/sections/BolosCaseiros'))
 const Pricing = dynamic(() => import('@/components/sections/Pricing'))
 const Extras = dynamic(() => import('@/components/sections/Extras'))
 const Process = dynamic(() => import('@/components/sections/Process'))
@@ -25,6 +26,7 @@ export default function Home() {
         <WhyUs />
         <Gallery />
         <Flavors />
+        <BolosCaseiros />
         <Pricing />
         <Extras />
         <Process />
