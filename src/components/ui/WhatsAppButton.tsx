@@ -42,7 +42,7 @@ export default function WhatsAppButton() {
                 >
                   <X size={10} />
                 </button>
-                <p className="text-sm font-semibold text-gray-900 leading-tight">Fale connosco! 👋</p>
+                <p className="text-sm font-semibold text-gray-900 leading-tight">Fale comigo! 👋</p>
                 <p className="text-xs text-gray-500 mt-0.5">Resposta rápida pelo WhatsApp</p>
               </motion.div>
             )}

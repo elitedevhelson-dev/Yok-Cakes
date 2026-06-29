@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Instagram, Facebook, Mail, MessageCircle, Heart } from 'lucide-react'
-import { INSTAGRAM_URL, FACEBOOK_URL, EMAIL, WHATSAPP_URL, NAV_LINKS } from '@/data/content'
+import { Instagram, Mail, MessageCircle, Heart, MapPin } from 'lucide-react'
+import { INSTAGRAM_URL, INSTAGRAM_HANDLE, EMAIL, WHATSAPP_URL, NAV_LINKS, LOCATION } from '@/data/content'
 
 export default function Footer() {
   return (
@@ -10,7 +10,6 @@ export default function Footer() {
 
           {/* ── Brand ── */}
           <div className="space-y-4">
-            {/* Logo + name */}
             <div className="flex items-center gap-3">
               <div className="relative h-16 w-16 flex-shrink-0">
                 <Image
@@ -31,9 +30,20 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-400 leading-relaxed max-w-[240px]">
-              Bolos personalizados para momentos especiais. Feitos com amor e ingredientes premium.
+              Bolos personalizados para aniversários, festas infantis, chá de bebé e muito mais. Feitos com amor em Vila Nova de Gaia.
             </p>
             <p className="text-xs text-gray-500 italic font-serif">&quot;Amor em forma de bolo.&quot;</p>
+
+            {/* Instagram CTA */}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-rose-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+            >
+              <Instagram size={15} aria-hidden="true" />
+              Seguir no Instagram
+            </a>
           </div>
 
           {/* ── Navigation ── */}
@@ -64,8 +74,8 @@ export default function Footer() {
               {[
                 { Icon: MessageCircle, label: 'WhatsApp', href: WHATSAPP_URL, external: true },
                 { Icon: Mail, label: EMAIL, href: `mailto:${EMAIL}`, external: false },
-                { Icon: Instagram, label: '@yokcakes', href: INSTAGRAM_URL, external: true },
-                { Icon: Facebook, label: 'Yok Cakes', href: FACEBOOK_URL, external: true },
+                { Icon: Instagram, label: INSTAGRAM_HANDLE, href: INSTAGRAM_URL, external: true },
+                { Icon: MapPin, label: LOCATION, href: '#', external: false },
               ].map(({ Icon, label, href, external }) => (
                 <li key={label}>
                   <a
@@ -90,7 +100,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Yok Cakes. Todos os direitos reservados.
+            © {new Date().getFullYear()} Yok Cakes — Vila Nova de Gaia. Todos os direitos reservados.
           </p>
           <p className="text-xs text-gray-600 flex items-center gap-1">
             Feito com <Heart size={12} className="fill-rose-500 text-rose-500" aria-hidden="true" /> em Portugal

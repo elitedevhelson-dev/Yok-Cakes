@@ -19,24 +19,25 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
+    default: 'Yok Cakes | Bolos Artesanais em Vila Nova de Gaia',
     template: '%s | Yok Cakes',
   },
   description:
-    'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé, comunhões e datas especiais. Ingredientes naturais, produção 100% artesanal e acabamento profissional.',
+    'Confeitaria artesanal em Vila Nova de Gaia. Bolos personalizados para aniversários, festas infantis, chá de bebé, comunhões e eventos familiares. Feitos com amor e ingredientes naturais.',
   keywords: [
-    'bolos personalizados',
-    'bolo de aniversário personalizado',
+    'bolos personalizados Vila Nova de Gaia',
+    'confeitaria Vila Nova de Gaia',
+    'bolo de aniversário Vila Nova de Gaia',
     'bolo para festa infantil',
     'bolo chá de bebé',
     'bolo de comunhão',
-    'bolos artesanais Lisboa',
-    'bolo personalizado Lisboa',
+    'bolos artesanais Gaia',
+    'bolo personalizado Gaia',
     'Yok Cakes',
-    'confeitaria artesanal Lisboa',
+    'confeitaria artesanal',
     'cake design aniversário',
-    'bolos para festas',
-    'bolo temático',
+    'bolos para eventos familiares',
+    'bolo temático personalizado',
   ],
   metadataBase: new URL('https://yokcakes.pt'),
   authors: [{ name: 'Yok Cakes' }],
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
     locale: 'pt_PT',
     url: 'https://yokcakes.pt',
     siteName: 'Yok Cakes',
-    title: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
+    title: 'Yok Cakes | Bolos Artesanais em Vila Nova de Gaia',
     description:
-      'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé e comunhões. Feitos com amor e ingredientes selecionados.',
+      'Confeitaria artesanal em Vila Nova de Gaia. Bolos personalizados para aniversários, festas infantis, chá de bebé e comunhões. Feitos com amor.',
     images: [
       {
         url: '/og-image.jpg',
@@ -69,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yok Cakes | Bolos Artesanais para Aniversários e Celebrações',
-    description: 'Bolos artesanais personalizados para aniversários, festas infantis, chá de bebé e comunhões.',
+    title: 'Yok Cakes | Bolos Artesanais em Vila Nova de Gaia',
+    description: 'Confeitaria artesanal em Vila Nova de Gaia. Bolos personalizados para aniversários, festas infantis, chá de bebé e comunhões.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -97,19 +98,19 @@ const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Bakery',
   name: 'Yok Cakes',
-  description: 'Confeitaria artesanal especializada em bolos personalizados para aniversários, festas infantis, chá de bebé, comunhões e datas especiais.',
+  description: 'Confeitaria artesanal em Vila Nova de Gaia especializada em bolos personalizados para aniversários, festas infantis, chá de bebé, comunhões e eventos familiares.',
   url: 'https://yokcakes.pt',
-  telephone: '+351-XXX-XXX-XXX',
-  email: 'info@yokcakes.pt',
+  telephone: '+351912775295',
+  email: 'yoknaldineo@gmail.com',
   image: 'https://yokcakes.pt/og-image.jpg',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Lisboa',
+    addressLocality: 'Vila Nova de Gaia',
+    addressRegion: 'Porto',
     addressCountry: 'PT',
   },
   sameAs: [
-    'https://instagram.com/yokcakes',
-    'https://facebook.com/yokcakes',
+    'https://instagram.com/yokcakesoficial',
   ],
   servesCuisine: 'Confeitaria Artesanal',
   priceRange: '€€',
