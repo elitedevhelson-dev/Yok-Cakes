@@ -356,11 +356,11 @@ export const BOLOS_PERSONALIZADOS = [
   },
   {
     id: 6,
-    name: 'Naked Cake',
-    src: '/bolos/bolo-neked-cake.png',
-    description: 'Naked Cake com decoração minimalista e elegante, perfeito para quem procura um estilo moderno e sofisticado.',
+    name: 'Bolo Texturizado',
+    src: '/bolos/Bolo Texturizado.png',
+    description: 'Bolo texturizado com acabamento moderno e elegante, ideal para aniversários, celebrações especiais e quem procura um design sofisticado.',
     weight: '1 kg',
-    price: 32,
+    price: 38,
   },
   {
     id: 7,
@@ -369,6 +369,14 @@ export const BOLOS_PERSONALIZADOS = [
     description: 'Bolo personalizado decorado com morangos frescos e acabamento artesanal, combinando elegância e sabor.',
     weight: '2 kg',
     price: 60,
+  },
+  {
+    id: 8,
+    name: 'Bolo Coquette',
+    src: '/bolos/Bolo Coquette.png',
+    description: 'Bolo delicado com estilo Coquette, decorado com laços e detalhes elegantes, perfeito para aniversários e ocasiões especiais.',
+    weight: '1 kg',
+    price: 38,
   },
 ]
 
